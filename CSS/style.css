@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(156, 44, 44);
+}
+
+.titulo {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(73, 2, 2);
+    color: rgb(255, 240, 240);
+    font-size: 65pt;
+    text-align: center;
+}
+
+.areaMusica {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aMusica {
+    user-select: none;
+    border: 3px;
+    border-color: rgb(73, 2, 2);
+    border-style: solid;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: auto;
+}
+
+.setaEsquerda,
+.setaDireita {
+    user-select: none;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: rgb(73, 2, 2);
+    color: rgb(255, 240, 240);
+    font-size: 50pt;
+    display: flex;
+    cursor: pointer;
+}
+
+.setaEsquerda {
+    margin-left: 35rem;
+}
+
+.setaDireita {
+    margin-right: 35rem;
+}
+
+.tocar {
+    font-size: 22pt;
+    user-select: none;
+    border-color: rgb(73, 2, 2);
+    cursor: pointer;
+    border-style: solid;
+    padding: 1.5rem;
+    color: rgb(255, 240, 240);
+    background-color: rgb(139, 41, 41);
+    display: flex;
+    margin: 0 auto;
+}
+
+.tocar:hover {
+    background-color: rgb(104, 30, 30);
+}
+
+.nomeAlbum {
+    font-size: 30pt;
+    margin-top: 1rem;
+    display: flex;
+    -webkit-text-stroke-width: 1.8px;
+    -webkit-text-stroke-color: rgb(73, 2, 2);
+    color: rgb(255, 240, 240);
+    text-align: center;
+    justify-content: center;
+}
+
+.nomeArtista {
+    font-size: 25pt;
+    margin-bottom: -1rem;
+    display: flex;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(73, 2, 2);
+    color: rgb(255, 240, 240);
+    text-align: center;
+    justify-content: center;
+}
