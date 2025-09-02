@@ -43,23 +43,38 @@ totalAlbunsFotos = albunsFotos.length
 totalAlbunsNomes = albunsNomes.length
 totalArtistas = albunsArtistas.length
 
+audio.addEventListener('ended', acabar)
 setaDireita.addEventListener('click', irAlbum)
 setaEsquerda.addEventListener('click', voltarAlbum)
 play.addEventListener('click', darPlay)
+
+function acabar() {
+    play.innerHTML = 'Tocar música'
+}
 
 function irAlbum() {
     album.src = albunsFotos[i = (i + 1) % totalAlbunsFotos]
     nomeAlbum.innerHTML = albunsNomes[i]
     nomeArtista.innerHTML = albunsArtistas[i]
+    audio.src = albunsMusicas[i]
+    play.innerHTML = 'Tocar música'
 }
 
 function voltarAlbum() {
     album.src = albunsFotos[i = (i - 1 + totalAlbunsFotos) % totalAlbunsFotos]
     nomeAlbum.innerHTML = albunsNomes[i]
     nomeArtista.innerHTML = albunsArtistas[i]
+    audio.src = albunsMusicas[i]
+    play.innerHTML = 'Tocar música'
 }
 
 function darPlay() {
-    audio.src = albunsMusicas[i]
-    audio.play()
+    if(audio.paused){
+        audio.play()
+        play.innerHTML = 'Pausar música'
+    }
+    else{
+        audio.pause()
+        play.innerHTML = 'Tocar música'
+    }
 }
